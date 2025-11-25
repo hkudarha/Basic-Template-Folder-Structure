@@ -1,10 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  AuthRoutes,
-  AuthenticatedRoutes,
-  UnauthenticatedRoutes,
-} from "./constants/router";
+import { AuthRoutes, AuthenticatedRoutes, UnauthenticatedRoutes } from "./constants/router";
 import Layout from "./components/website/Layout";
 import Home from "./components/website/Home";
 import About from "./components/website/About";
@@ -16,27 +12,24 @@ import ScrollToTop from "./constants/ScrollToTop";
 const RouterPage = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop>
-        <Routes>
-          {/* Public Website Routes */}
-          <Route path={UnauthenticatedRoutes.HOME} element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path={UnauthenticatedRoutes.ABOUT} element={<About />} />
-            <Route path={UnauthenticatedRoutes.CONTACT} element={<Contact />} />
-            <Route
-              path={UnauthenticatedRoutes.PRODUCT_DETAIL}
-              element={<ProductDetail />}
-            />
-          </Route>
+    <ScrollToTop />
+      <Routes>
+        {/* Public Website Routes */}
+        <Route path={UnauthenticatedRoutes.HOME} element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path={UnauthenticatedRoutes.ABOUT} element={<About />} />
+          <Route path={UnauthenticatedRoutes.CONTACT} element={<Contact />} />
+          <Route path={UnauthenticatedRoutes.PRODUCT_DETAIL} element={<ProductDetail />} />
+        </Route>
 
-          {/* Auth Routes */}
+        {/* Auth Routes */}
 
-          {/* <Route path={AuthRoutes.LOGIN} element={<Login />} />
+        {/* <Route path={AuthRoutes.LOGIN} element={<Login />} />
         <Route path={AuthRoutes.REGISTER} element={<Register />} /> */}
 
-          {/* Protected Dashboard */}
+        {/* Protected Dashboard */}
 
-          {/* <Route
+        {/* <Route
           path={AuthenticatedRoutes.DASHBOARD}
           element={
             <ProtectedRoute>
@@ -44,8 +37,7 @@ const RouterPage = () => {
             </ProtectedRoute>
           }
         /> */}
-        </Routes>
-      </ScrollToTop>
+      </Routes>
     </BrowserRouter>
   );
 };
