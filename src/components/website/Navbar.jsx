@@ -17,19 +17,18 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md sticky w-full z-50 top-0 left-0">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        <Link to="/" className="text-2xl font-bold text-purple-600">
+        <Link to="/" className="text-2xl font-bold text-primary">
           MyWebsite
         </Link>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <li key={item.path}>
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-gray-700 hover:text-purple-600 font-medium ${
-                    isActive ? "text-purple-600" : ""
+                  `text-secondary hover:text-primary font-medium ${
+                    isActive ? "text-primary" : ""
                   }`
                 }
               >
@@ -42,13 +41,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to={AuthRoutes.LOGIN}
-            className="border border-purple-600 text-purple-600 px-4 py-1.5 rounded-md hover:bg-purple-600 hover:text-white transition"
+            className="border border-primary text-primary px-4 py-1.5 rounded-md hover:bg-primary hover:text-white transition"
           >
             Login
           </Link>
           <Link
             to={AuthRoutes.REGISTER}
-            className="bg-purple-600 text-white px-4 py-1.5 rounded-md hover:bg-purple-700 transition"
+            className="bg-primary text-white px-4 py-1.5 rounded-md hover:bg-purple-700 transition"
           >
             Register
           </Link>
@@ -57,7 +56,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-2xl text-gray-700"
+          className="md:hidden text-2xl text-secondary"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -73,8 +72,8 @@ const Navbar = () => {
                   to={item.path}
                   onClick={toggleMenu}
                   className={({ isActive }) =>
-                    `text-gray-700 hover:text-purple-600 font-medium ${
-                      isActive ? "text-purple-600" : ""
+                    `text-secondary hover:text-primary font-medium ${
+                      isActive ? "text-primary" : ""
                     }`
                   }
                 >
@@ -87,14 +86,14 @@ const Navbar = () => {
               <Link
                 to={AuthRoutes.LOGIN}
                 onClick={toggleMenu}
-                className="border border-purple-600 text-purple-600 px-5 py-2 rounded-md hover:bg-purple-600 hover:text-white transition"
+                className="border border-primary text-primary px-5 py-2 rounded-md hover:bg-primary hover:text-white transition"
               >
                 Login
               </Link>
               <Link
                 to={AuthRoutes.REGISTER}
                 onClick={toggleMenu}
-                className="bg-purple-600 text-white px-5 py-2 rounded-md hover:bg-purple-700 transition"
+                className="bg-primary text-white px-5 py-2 rounded-md hover:bg-purple-700 transition"
               >
                 Register
               </Link>

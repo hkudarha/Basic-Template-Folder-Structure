@@ -1,12 +1,12 @@
 import axios from "axios";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 
 export const MainContent = {
-  appName: "NHC ONE",
-  logo: logo,
+  appName: "Harshita Kudarha ",
+  // logo: logo,
   appURL: "",
-  contactNo: "+022-69710-968",
-  email: "india.nhcorg@gmail.com",
+  contactNo: "+91 8962813397",
+  email: "hkudarha@gmail.com",
   address:
     " Noida Sector 62, SO Gautam Buddha Nagar, Uttar Pradesh, India - 201309",
   telegram_link: "https://t.me/YourTelegramUsername",
