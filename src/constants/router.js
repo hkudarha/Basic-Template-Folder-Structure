@@ -11,4 +11,5 @@ export const UnauthenticatedRoutes = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
+  PRODUCT_DETAIL: "/product/:id",
 };
