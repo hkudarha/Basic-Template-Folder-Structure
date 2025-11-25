@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AuthRoutes, UnauthenticatedRoutes } from "../../constants/router";
+import { MainContent } from "../../constants/maincontant";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky w-full z-50 top-0 left-0">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         <Link to="/" className="text-2xl font-bold text-primary">
-          MyWebsite
+          <img src={MainContent.logo} alt="" className="w-[5rem]" />
         </Link>
 
         <ul className="hidden md:flex items-center gap-6">

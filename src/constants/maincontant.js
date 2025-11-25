@@ -1,15 +1,20 @@
 import axios from "axios";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 
 export const MainContent = {
   appName: "Harshita Kudarha ",
-  // logo: logo,
+  logo: logo,
   appURL: "",
   contactNo: "+91 8962813397",
   email: "hkudarha@gmail.com",
-  address:
-    " Noida Sector 62, SO Gautam Buddha Nagar, Uttar Pradesh, India - 201309",
+  address:" Noida Sector 62, SO Gautam Buddha Nagar, Uttar Pradesh, India - 201309",
+
   telegram_link: "https://t.me/YourTelegramUsername",
+  instagram_link: "https://www.instagram.com/YourInstagramUsername",
+  facebook_link: "https://www.facebook.com/YourFacebookUsername",
+  twitter_link: "https://twitter.com/YourTwitterUsername",
+  linkedin_link: "https://www.linkedin.com/in/YourLinkedinUsername",
+  youtube_link: "https://www.youtube.com/channel/YourYoutubeChannelID",
 };
 export const backendConfig = {
   base: "https://api.darbarcollection.com/api",
